@@ -1,0 +1,49 @@
+body {
+font-family: Arial, sans-serif;
+margin: 40px;
+background-color: #f5f7fa;
+color: #333;
+}
+
+header {
+background-color: #2a5d84;
+color: white;
+padding: 20px;
+border-radius: 8px;
+}
+
+nav {
+margin-top: 10px;
+}
+
+nav a {
+margin-right: 20px;
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+
+nav a:hover {
+text-decoration: underline;
+}
+
+section {
+max-width: 800px;
+margin-top: 30px;
+}
+
+img {
+margin-top: 20px;
+border-radius: 10px;
+}
+
+h2 {
+margin-top: 20px;
+color: #2a5d84;
+}
+
+footer {
+margin-top: 40px;
+padding-top: 10px;
+border-top: 1px solid #ccc;
+}
