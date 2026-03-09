@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     color: #333;
@@ -20,42 +20,50 @@ body::before {
     z-index: -1;
 }
 
-/* Header */
-header {
-    text-align: center;
-    background-color: #2a5d84;
+/* Hero Section */
+header.hero {
+    background: url('hero-background.jpg') no-repeat center center;
+    background-size: cover;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     color: white;
-    padding: 30px 20px;
-    border-radius: 0 0 15px 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    font-weight: bold;
+header.hero .hero-overlay {
+    background-color: rgba(42, 93, 132, 0.6); /* semi-transparent overlay */
+    padding: 50px 30px;
+    border-radius: 15px;
+    max-width: 900px;
 }
 
-nav {
-    margin-top: 15px;
+header.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
 }
 
-nav a {
+header.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+header.hero nav a {
     margin: 0 15px;
     color: white;
-    text-decoration: none;
     font-weight: bold;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-nav a:hover {
-    text-decoration: underline;
-    color: #f0e68c; /* subtle accent on hover */
+header.hero nav a:hover {
+    color: #f0e68c;
 }
 
-/* Main Section */
-section {
+/* About Me / Main Section */
+section.about-section {
     max-width: 1000px;
     margin: 50px auto;
     padding: 40px;
@@ -68,15 +76,20 @@ section {
     gap: 30px;
 }
 
-/* Profile Image */
-section img {
-    width: 300px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+section.about-section .profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 30px;
 }
 
-/* About Me Text */
-section div.about-text {
+section.about-section img.profile-photo {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+section.about-section .about-text {
     flex: 1;
     min-width: 300px;
 }
@@ -116,16 +129,28 @@ footer a:hover {
 
 /* Responsive Design */
 @media screen and (max-width: 900px) {
-    section {
+    section.about-section {
         flex-direction: column;
         text-align: center;
     }
     
-    section div.about-text {
+    section.about-section .about-text {
         text-align: center;
     }
     
-    section img {
+    section.about-section img.profile-photo {
         margin: 0 auto;
+    }
+    
+    header.hero {
+        height: 350px;
+    }
+
+    header.hero h1 {
+        font-size: 2rem;
+    }
+
+    header.hero p {
+        font-size: 1rem;
     }
 }
