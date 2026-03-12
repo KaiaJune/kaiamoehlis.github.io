@@ -140,3 +140,60 @@ footer a{
 }
 
 }
+
+/* Interests Page */
+
+.interests-section{
+
+max-width:1100px;
+margin:70px auto;
+padding:40px;
+
+}
+
+.section-title{
+
+text-align:center;
+font-size:32px;
+margin-bottom:50px;
+color:#2a5d84;
+
+}
+
+.interests-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+
+}
+
+.interest-card{
+
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 14px rgba(0,0,0,0.08);
+transition:transform .25s ease;
+
+}
+
+.interest-card:hover{
+
+transform:translateY(-6px);
+
+}
+
+.interest-card h3{
+
+margin-top:0;
+color:#2a5d84;
+
+}
+
+.interest-card p{
+
+line-height:1.6;
+
+}
+
